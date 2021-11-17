@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BasItem from "./Bas-li";
+import BasItem from "./BasketItem";
 class BasketList extends Component {
   constructor() {
     super();
@@ -16,8 +16,8 @@ class BasketList extends Component {
               key={i}
               name={obj.item}
               quant={obj.quant}
-              increase={this.props.increase}
-              decrease={this.props.decrease}
+              increase={() => this.props.increase(obj.item)}
+              decrease={() => this.props.decrease(obj.item)}
             />
           ))}
         </ul>

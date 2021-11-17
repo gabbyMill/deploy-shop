@@ -8,6 +8,7 @@ class BasItem extends Component {
         <li>
           {this.props.quant} {this.props.name}
         </li>
+        <input type="checkbox" onClick={() => console.log(123)} />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GroItem from "./Gro-li";
+import GroItem from "./GorceryItem";
 class GroceryList extends Component {
   constructor() {
     super();

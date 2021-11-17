@@ -13,6 +13,7 @@ class Content extends Component {
 
   updateBasket = item => {
     let quant;
+    // Code dup, use handleAddState
 
     // If this item is already on basket list
     const basketCopy = [...this.state.basket];
@@ -33,20 +34,33 @@ class Content extends Component {
     // You can do this by modifying basket to be an array of objects
   };
 
-  // increase = item => {
-  //   this.state.basket.forEach(stateItem => {
-  //     if (stateItem === item) {
-  //       this.setState();
-  //     }
-  //   });
-  // };
-  // decrease = item => {
-  //   this.state.basket.forEach(stateItem => {
-  //     if (stateItem === item) {
-  //       this.setState();
-  //     }
-  //   });
-  // };
+  increase = item => {
+    // Code dup, use handleAddState
+    const basketCopy = [...this.state.basket];
+    this.state.basket.forEach((obj, i) => {
+      if (obj.item === item) {
+        const quant = obj.quant + 1;
+        const itemObject = { item, quant };
+        basketCopy.splice(i, 1, itemObject);
+        this.setState({ basket: basketCopy });
+      }
+    });
+  };
+  decrease = item => {
+    // Code dup, use handleAddState
+    const basketCopy = [...this.state.basket];
+    this.state.basket.forEach((obj, i) => {
+      if (obj.item === item) {
+        const quant = obj.quant - 1;
+        if (quant === 0) return;
+        const itemObject = { item, quant };
+        basketCopy.splice(i, 1, itemObject);
+        this.setState({ basket: basketCopy });
+      }
+    });
+  };
+
+  lineTh = item => {};
 
   render() {
     return (
@@ -54,12 +68,16 @@ class Content extends Component {
         <GroceryList addToBasket={this.updateBasket} />
         <BasketList
           list={this.state.basket}
-          inc={this.increase}
-          dec={this.decrease}
+          increase={this.increase}
+          decrease={this.decrease}
         />
       </div>
     );
   }
+}
+
+function handleAddState() {
+  return true;
 }
 
 export default Content;
