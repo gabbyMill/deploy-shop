@@ -15,14 +15,19 @@ class GroceryList extends Component {
       ],
     };
   }
+
   render() {
     return (
       <div className="gro-list">
         <h4>Gro List</h4>
         <ul>
-          {this.state.items.map(item => {
-            return <GroItem name={item} />;
-          })}
+          {this.state.items.map((item, i) => (
+            <GroItem
+              name={item}
+              key={i}
+              add={() => this.props.addToBasket(item)}
+            />
+          ))}
         </ul>
       </div>
     );

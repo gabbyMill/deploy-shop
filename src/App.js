@@ -1,7 +1,6 @@
 import Header from "./Components/Header";
 import Searchbar from "./Components/Search-bar";
-import GroceryList from "./Components/Groceries-ul";
-import BasketList from "./Components/Basket-ul";
+import Content from "./Components/Content";
 import Footer from "./Components/Footer";
 import "./App.scss";
 
@@ -10,9 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <Searchbar />
-      <div className="container">
-        <GroceryList />
-        <BasketList />
+      <div id="container">
+        <Content />
       </div>
       <Footer />
     </div>

@@ -16,7 +16,14 @@
   background-color: pink;
   border: solid 2px red;
 }
-.container {
+
+.content {
   display: flex;
+  // flex-direction: column;
   justify-content: space-around;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
