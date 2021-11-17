@@ -4,9 +4,13 @@ class Searchbar extends Component {
   //   super(props)
   // }
   render() {
-    return <></>;
+    return (
+      <div className="search-bar">
+        <h6>SearchBar</h6>
+        <input className="text-search" placeholder="Search for item" />
+      </div>
+    );
   }
-  updateFilter = () => {};
 }
 
 export default Searchbar;

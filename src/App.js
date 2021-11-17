@@ -1,24 +1,20 @@
 import Header from "./Components/Header";
 import Searchbar from "./Components/Search-bar";
-import GrocerieList from "./Components/Groceries-ul";
+import GroceryList from "./Components/Groceries-ul";
 import BasketList from "./Components/Basket-ul";
-import "./App.css";
+import Footer from "./Components/Footer";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <div className="container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-          reiciendis eius <strong>explicabo</strong> quaerat sit nesciunt,
-          officiis excepturi vero incidunt voluptatem?
-        </p>
-      </div>
       <Header />
       <Searchbar />
-      <GrocerieList />
-      <BasketList />
+      <div className="container">
+        <GroceryList />
+        <BasketList />
+      </div>
+      <Footer />
     </div>
   );
 }

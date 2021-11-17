@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.basket {
+  background-color: black;
+  font-size: 2rem;
+  color: white;
+  margin: 1rem;
+  border: solid 20px grey;
+  border-radius: 30px;
+}
+
+.search-bar {
+  margin: 1rem;
+  background-color: pink;
+  border: solid 2px red;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
