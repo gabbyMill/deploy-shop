@@ -1,5 +1,6 @@
 import GroceryList from "./GroceryList";
 import BasketList from "./BasketList";
+import Searchbar from "./Search-bar";
 import React, { Component } from "react";
 class Content extends Component {
   constructor() {
@@ -64,14 +65,17 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="content">
-        <GroceryList addToBasket={this.updateBasket} />
-        <BasketList
-          list={this.state.basket}
-          increase={this.increase}
-          decrease={this.decrease}
-        />
-      </div>
+      <>
+        <Searchbar />
+        <div className="content">
+          <GroceryList addToBasket={this.updateBasket} />
+          <BasketList
+            list={this.state.basket}
+            increase={this.increase}
+            decrease={this.decrease}
+          />
+        </div>
+      </>
     );
   }
 }
