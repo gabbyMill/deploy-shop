@@ -8,9 +8,6 @@ class Content extends Component {
     this.state = { basket: [] };
     /* groceries: [] later add to state */
   }
-  componentDidUpdate() {
-    // console.log(this.state);
-  }
 
   updateBasket = item => {
     let quant;
@@ -26,13 +23,9 @@ class Content extends Component {
         this.setState({ basket: basketCopy });
       }
     });
-    // If this is a new item
     if (quant != undefined) return;
     const updated = [...this.state.basket, { item, quant: 1 }];
     this.setState({ basket: updated });
-
-    // Later, add functionality to decrement and increment quantity
-    // You can do this by modifying basket to be an array of objects
   };
 
   increase = item => {
