@@ -1,3 +1,7 @@
+html {
+  background-color: rgb(200, 200, 200);
+}
+
 .App {
   text-align: center;
 }
@@ -6,7 +10,6 @@
   background-color: black;
   font-size: 2rem;
   color: white;
-  margin: 1rem;
   border: solid 20px grey;
   border-radius: 30px;
 }
@@ -28,11 +31,26 @@ ul {
   list-style: none;
 }
 
+li {
+  background-color: rgb(148, 148, 148);
+  border: solid 1px rgb(168, 71, 71);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
 .line-th {
   text-decoration: line-through;
 }
 
-.text-search {
+.event-search {
   margin-bottom: 1.5rem;
   // padding: 1rem;
+}
+.hidden {
+  display: none;
+}
+
+.footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

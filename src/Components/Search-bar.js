@@ -7,20 +7,20 @@ class Searchbar extends Component {
     };
   }
 
-  filter = event => {
-    this.setState({ sBar: event.target.value });
-  };
+  // filter = event => {
+  //   this.setState({ sBar: event.target.value });
+  // };
 
-  componentDidUpdate() {
-    const sBarValue = this.state.sBar;
-  }
+  // componentDidUpdate() {
+  //   const sBarValue = this.state.sBar;
+  // }
 
   render() {
     return (
       <div className="search-bar">
         <h6>SearchBar</h6>
         <input
-          onInput={this.filter}
+          onInput={this.props.wordsToFilter}
           className="event-search"
           placeholder="Search for item"
         />

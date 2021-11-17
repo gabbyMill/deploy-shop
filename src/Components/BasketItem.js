@@ -5,7 +5,7 @@ class BasItem extends Component {
       <div className="bas-item">
         <button onClick={this.props.increase}>+</button>
         <button onClick={this.props.decrease}>-</button>
-        <li>
+        <li className="li-item">
           {this.props.quant} {this.props.name}
         </li>
         <input type="checkbox" onClick={() => console.log(123)} />

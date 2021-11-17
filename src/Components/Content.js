@@ -9,7 +9,7 @@ class Content extends Component {
     /* groceries: [] later add to state */
   }
   componentDidUpdate() {
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   updateBasket = item => {
@@ -61,12 +61,22 @@ class Content extends Component {
     });
   };
 
-  lineTh = item => {};
+  wordsToFilter = e => {
+    const val = e.target.value;
+    const liItems = [...document.querySelectorAll(".li-item")];
+    liItems.forEach(el => {
+      if (!el.textContent.toLowerCase().includes(val.toLowerCase())) {
+        el.classList.add("hidden");
+      } else {
+        if ([...el.classList].includes("hidden")) el.classList.remove("hidden");
+      }
+    });
+  };
 
   render() {
     return (
       <>
-        <Searchbar />
+        <Searchbar wordsToFilter={this.wordsToFilter} />
         <div className="content">
           <GroceryList addToBasket={this.updateBasket} />
           <BasketList
