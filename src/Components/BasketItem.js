@@ -8,11 +8,17 @@ class BasItem extends Component {
   render() {
     return (
       <div className="bas-item">
-        <button onClick={this.props.increase}>+</button>
-        <button onClick={this.props.decrease}>-</button>
         <li className="li-item">
           <input type="checkbox" onClick={this.lineTh} />
           {this.props.quant} {this.props.name}
+          <div className="inc-dec">
+            <button className="inc" onClick={this.props.increase}>
+              +
+            </button>
+            <button className="dec" onClick={this.props.decrease}>
+              -
+            </button>
+          </div>
         </li>
       </div>
     );

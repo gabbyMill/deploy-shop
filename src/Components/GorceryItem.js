@@ -3,7 +3,9 @@ class GroItem extends Component {
   render() {
     return (
       <div className="gro-item">
-        <button onClick={this.props.add}>Add to basket</button>
+        <button className="add-to" onClick={this.props.add}>
+          ➕
+        </button>
         <li>{this.props.name}</li>
       </div>
     );

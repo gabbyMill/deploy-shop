@@ -59,9 +59,12 @@ class Content extends Component {
     const liItems = [...document.querySelectorAll(".li-item")];
     liItems.forEach(el => {
       if (!el.textContent.toLowerCase().includes(val.toLowerCase())) {
-        el.classList.add("hidden");
+        const fatherEl = el.closest(".bas-item");
+        fatherEl.classList.add("hidden");
       } else {
-        if ([...el.classList].includes("hidden")) el.classList.remove("hidden");
+        const fatherEl = el.closest(".bas-item");
+        if ([...fatherEl.classList].includes("hidden"))
+          fatherEl.classList.remove("hidden");
       }
     });
   };

@@ -9,7 +9,7 @@ class BasketList extends Component {
   render() {
     return (
       <div className="bas-list">
-        <h5>Basket</h5>
+        <h2>🛒</h2>
         <ul className="bas-ul">
           {this.props.list.map((obj, i) => (
             <BasItem

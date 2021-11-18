@@ -19,7 +19,7 @@ class GroceryList extends Component {
   render() {
     return (
       <div className="gro-list">
-        <h4>Groceries</h4>
+        <h4>🥑🍌🥕🍞🍚</h4>
         <ul>
           {this.state.items.map((item, i) => (
             <GroItem
