@@ -79,7 +79,8 @@ button {
 }
 
 .add-to {
-  height: 5em;
+  margin: 1rem;
+  // height: 5em;
   &:active {
     background: rgb(199, 188, 35);
     // transition: 0.8s ease-in-out;
