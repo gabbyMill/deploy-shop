@@ -14,3 +14,5 @@ An image describing the flow of the application:
 ###### Pink rectangles represent event handlers
 
 ![Example](./assets/1.png)
+
+##### [React](https://reactjs.org/)
